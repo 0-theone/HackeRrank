@@ -7,6 +7,7 @@
 //The minimum sum is 1 + 3 + 5 + 7 = 16 and the maximum sum is  3 + 5 + 7 + 9 = 24. The function prints
 //16 24
 
+//BAD
 function minMaxSum(arr) {
     const min = Math.min.apply(null, arr);
     const max = Math.max.apply(null, arr);
@@ -15,6 +16,7 @@ function minMaxSum(arr) {
     console.log(minSum,maxSum);
 }
 
+//GOOD
 function minMax2(arr) {
     const sums = [];
     let i = 0;
