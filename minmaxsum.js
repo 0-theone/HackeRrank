@@ -10,8 +10,9 @@
 function miniMaxSum(arr) {
     const min = Math.min.apply(null, arr);
     const max = Math.max.apply(null, arr);
-    const sum = (value) => arr.filter(i=> i !== value).reduce((a,b)=> a + b);
-    console.log(sum(max), sum(min));
+    const minSum = arr.reduce((a,b) => a + b) - max;
+    const maxSum = arr.reduce((a,b) => a + b) - min;
+    console.log(minSum,maxSum);
 }
 
 function main() {
