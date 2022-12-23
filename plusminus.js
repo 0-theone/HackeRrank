@@ -21,10 +21,23 @@ function plusMinus(arr) {
     console.log((zeroes.length / arr.length).toFixed(6));
 }
 
+function plusMinusReduce(arr) {
+    const n = arr.length;
+    const counter = arr.reduce((a, b) => b > 0 ? [a[0] + 1, a[1], a[2]] : b < 0 ? [a[0], a[1] + 1, a[2]] : [a[0], a[1], a[2] + 1], [0, 0, 0]);
+    const positives = counter[0];
+    const negatives = counter[1];
+    const zeroes = counter[2];
+
+    console.log((positives / n).toFixed(6));
+    console.log((negatives / n).toFixed(6));
+    console.log((zeroes / n).toFixed(6));
+}
+
+
 function main() {
-    const n = parseInt(readLine().trim(), 10);
-    const arr = readLine().replace(/\s+$/g, '').split(' ').map(arrTemp => parseInt(arrTemp, 10));
+    const arr = [1, 1, 0, -1, -1];
     plusMinus(arr);
+    plusMinusReduce(arr)
 }
 
 main();
