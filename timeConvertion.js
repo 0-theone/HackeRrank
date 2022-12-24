@@ -8,17 +8,6 @@ function timeConversion(s) {
     return `${hours}:${minutes}:${seconds}`
 }
 
-function timeConversion(s) {
-    let [hour, minute, second] = s.split(":")
-    if (second[2] === "P" && Number(hour) != 12) {
-        hour = Number(hour) + 12
-    } else if (second[2] === "A" && Number(hour) == 12) {
-        hour = "00"
-    }
-    return `${hour}:${minute}:${second[0]}${second[1]}`
-
-}
-
 function main() {
     console.log(timeConversion( "12:05:05PM"))
     console.log(timeConversion( "12:45:05AM"))
