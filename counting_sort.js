@@ -1,5 +1,4 @@
 function countingSort(arr) {
-    let j = 0;
     let supplementary = [];
     const n = arr.length;
     
@@ -26,3 +25,14 @@ function countingSort(arr) {
     }
 
 console.log(countingSort([1,1,3,2,1]))
+
+
+function countingSortVersion2(arr) {
+    let counterArray = Array(5).fill(0);
+    for (let number of arr) {
+        counterArray[number]++
+    }
+    return counterArray;
+}
+
+console.log(countingSortVersion2([1,1,3,2,1]))
