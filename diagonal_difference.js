@@ -15,7 +15,6 @@ function calculateDiagonals(matrix) {
             }
         });
     });
-    console.log(leftDiagonalSum,rightDiagonalSum)
     return Math.abs(leftDiagonalSum - rightDiagonalSum);
 }
 
