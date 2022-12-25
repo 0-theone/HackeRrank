@@ -7,10 +7,10 @@ function calculateDiagonals(matrix) {
 
    matrix.map((row, rowIndex) => {
         row.map((x, itemIndex) => {
-            if(rowIndex === itemIndex) { 
+            if (rowIndex === itemIndex) { 
                 leftDiagonalSum += matrix[rowIndex][itemIndex];
             }
-            if(rowIndex + itemIndex === n - 1){
+            if (rowIndex + itemIndex === n - 1) {
                 rightDiagonalSum += matrix[rowIndex][itemIndex];
             }
         });
