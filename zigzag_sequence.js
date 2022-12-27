@@ -1,7 +1,7 @@
 const zigZagArray = (input) => {
     const seen = {};
 
-    //convert input into arra, sort and remove duplicated values
+    //convert input into array, sort and remove duplicated values
     let sequence = Array.from(input).sort().filter(item => {
         return seen.hasOwnProperty(item) ? false : /^\d+$/.test(item) ? (seen[item] = true) : false;
     });
